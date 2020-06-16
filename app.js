@@ -27,11 +27,15 @@ randomNumberGenerator(formOfEnterTainment.length);
 finalFormOfEntertainment = formOfEnterTainment[answer];
 
 console.log("Here is a randomly generated trip to",finalDestination, "eating", finalPlaceToEat, "food. You'll take a", finalModeOfTravel,"to get there and head to a", finalFormOfEntertainment),"for entertainment!";
-let selected =prompt("type yes to confirm or No to see a new trip,")
-if(selected == ( "Yes")||("yes")){
-    console.log("you hit yess didnt you")
 
-}
-else{
-    console.log("this will run it again.")
+for(let i=0; i<10; i++){
+let decision = prompt("Enter Yes to confirm trip,");
+    if(decision == "Yes" ){
+        console.log("yes was typed")
+        break; 
+    }
+    else{
+        console.log("something else was typed...")
+        break;
+    }
 }
