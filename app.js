@@ -3,8 +3,8 @@
 let destinationLocations = ['Florida', 'Texas', 'Wisconsin', 'New York', 'Califorina'];
 let placesToEat = ['Seafood', 'Steak House', 'Brewery', 'Italian', 'Food Truck', 'Chinese'];
 let modeOfTravel = ['Plane', 'Train', 'Automobile', 'Boat'];
-let formOfEnterTainment = ['Concert', 'Pool', 'Beach', 'Monument','Football Game'];
-
+let formOfEnterTainment = ['Concert', 'Pool', 'Beach', 'Monument', 'Football Game'];
+let newTrip = "";
 //build a function to generate a whole random number.
 
 function randomNumberGenerator(highValue) {
@@ -22,11 +22,21 @@ let destination = getValueFromArray(destinationLocations, randomNumberGenerator(
 let eatAt = getValueFromArray(placesToEat, randomNumberGenerator(placesToEat.length));
 let travel = getValueFromArray(modeOfTravel, randomNumberGenerator(modeOfTravel.length));
 let entertainment = getValueFromArray(formOfEnterTainment, randomNumberGenerator(formOfEnterTainment.length));
+console.log(destination, eatAt, travel, entertainment);
 
-console.log(destination,eatAt,travel,entertainment);
+if (prompt("Type yes to confim trip") == "yes") {
+    console.log("complete");
+    console.log("You are going to",destination,"and eating at",eatAt,". You're taking a",travel,"and will be going to",entertainment,"for fun!")
 
+}
+else { 
+    destination = getValueFromArray(destinationLocations, randomNumberGenerator(destinationLocations.length));
+    eatAt = getValueFromArray(placesToEat, randomNumberGenerator(placesToEat.length));
+    travel = getValueFromArray(modeOfTravel, randomNumberGenerator(modeOfTravel.length));
+    entertainment = getValueFromArray(formOfEnterTainment, randomNumberGenerator(formOfEnterTainment.length));
+    console.log("Instead!!! You're going to",destination,"and eating",eatAt,". You're taking a",travel,"and will be going to",entertainment,"for fun!")
 
-
+}
 
 
 
