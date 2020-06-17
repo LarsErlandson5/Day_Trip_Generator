@@ -4,8 +4,6 @@ let destinationLocations = ['Florida', 'Texas', 'Wisconsin', 'New York', 'Califo
 let placesToEat = ['Seafood', 'Steak House', 'Brewery', 'Italian', 'Food Truck', 'Chinese'];
 let modeOfTravel = ['Plane', 'Train', 'Automobile', 'Boat'];
 let formOfEnterTainment = ['Concert', 'Pool', 'Beach', 'Monument', 'Football Game'];
-let newTrip = "";
-//build a function to generate a whole random number.
 
 function randomNumberGenerator(highValue) {
     let randomNumber = Math.floor((Math.random() * highValue) + 1) - 1;
@@ -17,7 +15,7 @@ function getValueFromArray(array, randomNumber) {
     let result = array[randomNumber];
     return result;
 }
-// call out array positions to determine trip
+
 let destination = getValueFromArray(destinationLocations, randomNumberGenerator(destinationLocations.length));
 let eatAt = getValueFromArray(placesToEat, randomNumberGenerator(placesToEat.length));
 let travel = getValueFromArray(modeOfTravel, randomNumberGenerator(modeOfTravel.length));
